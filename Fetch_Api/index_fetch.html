@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>FETCH_API</title>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body>
+        <h1>Fetch API</h1>
+        <div id="output"></div>
+
+        <script>
+            // Using promises
+            function getAnimaldataWithPromises() {
+                let outputElement = document.getElementById("output");
+                fetch("https://fakerapi.it/api/v1/persons")
+                    .then(function(response) { 
+                        return response.json();
+                    })
+                    .then(function(data) {
+                        console.log(data);
+                        outputElement.innerHTML = JSON.stringify(data);
+                    })
+                    .catch(function(error) {
+                        console.error("Error fetching the data", error);
+                    });
+            }
+        </script>
+
+        <button onclick="getAnimaldataWithPromises()">Get Animal</button>
+    </body>
+</html>

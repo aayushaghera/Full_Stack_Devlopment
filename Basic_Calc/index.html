@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function add() {
+            let n1 = parseInt(document.getElementById("n1").value);
+            let n2 = parseInt(document.getElementById("n2").value);
+
+                let sum = n1 + n2;
+                document.getElementById("ans").innerHTML = "Answer = " + sum;
+            }
+    </script>
+</head>
+<body>
+    <div class="block">
+        <h1 id="cal">Addition</h1>
+
+        <p>Number 1: <input type="text" id="n1" /> </p>
+        <p>Number 2: <input type="text" id="n2" /> </p>
+
+        <p>
+            <button onclick="add()" class="btn">Add</button>
+        </p>
+        <p id="ans"></p>
+    </div>
+</body>
+
+</html>

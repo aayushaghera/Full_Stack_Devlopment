@@ -1,0 +1,63 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:  #dfe450;
+}
+
+.block {
+    width: 400px;
+    border: 2px solid rgb(15, 210, 194);
+    margin: 150px auto;
+    padding: 20px;
+    border-style: solid; 
+    border-width: 10px;
+}
+button:hover
+{
+    background-color: #bde450;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1{
+    width: 100%;
+    animation-name: text;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#cal{
+    animation-direction: reverse;
+}
+
+@keyframes text {
+    from {
+        margin-left: 50%;
+    }
+
+    to {
+        margin-right: 80%;
+    }
+}
+
+#n1{
+    border-style: solid;
+    border-width: 3px;
+    border-color: blueviolet;
+
+}
+
+#n2{
+    border-style: solid;
+    border-width: 3px;
+    border-color: blueviolet;
+
+}
+

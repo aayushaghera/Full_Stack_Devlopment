@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="block">
+        
+            <ul id="items">
+                <li>TODO APPLICATION</li>
+            </ul>
+        
+            Enter input: 
+            <input type="text" id="info" />
+    
+            <button onclick="Addtodo()" id="btn1">AddTodo</button>
+        </div>
+        
+        <script>
+            function Addtodo()
+            {
+                const ul =  document.getElementById("items");
+                const newTodo = document.createElement("li");
+
+                const input = document.getElementById("info");
+                const finalinput = newTodo.textContent = input.value + " ";
+
+                const removebutton = document.createElement("button");
+                removebutton.textContent = "Remove";
+                removebutton.onclick = function()
+                {
+                    ul.removeChild(newTodo);
+                }
+
+                const donebutton = document.createElement("button");
+                donebutton.textContent = "done";
+                donebutton.onclick = function()
+                {
+                     newTodo.style.color = "green";
+                }
+                 
+                const notedonebutton = document.createElement("button");
+                notedonebutton.textContent = "notedone";
+                notedonebutton.onclick = function()
+                {
+                    newTodo.style.color = "Red";
+                }
+
+                newTodo.appendChild(removebutton);
+                newTodo.appendChild(donebutton);
+                newTodo.appendChild(notedonebutton);
+
+                ul.appendChild(newTodo);
+                input.value = "";
+                input.focus();
+            }
+        </script>
+    </body>
+</html>
